@@ -1,0 +1,60 @@
+/* 高亮基础样式 */
+.vocab-highlight {
+  background-color: #fff176;
+  border-bottom: 2px solid #ffd54f;
+  cursor: help;
+  border-radius: 2px;
+  color: inherit; /* 继承原有文字颜色 */
+  display: inline;
+}
+
+/* 这是一个独立的层，直接挂在 body 下，不会被 overflow:hidden 遮挡 */
+#vocab-tooltip-container {
+  display: none; /* 默认隐藏 */
+  position: absolute;
+  z-index: 2147483647; /* 最大的 z-index 值，确保在最顶层 */
+  
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  pointer-events: none; /* 让鼠标事件穿透，避免闪烁 */
+  white-space: nowrap;
+  
+  /* 小三角箭头（可选，这里用 drop-shadow 实现比较简单，或者直接不要箭头） */
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+}
+
+#vocab-tooltip-container .v-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+#vocab-tooltip-container .v-pos {
+  background: #ff9800;
+  color: #fff;
+  font-size: 10px;
+  padding: 1px 4px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#vocab-tooltip-container .v-trans {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+#vocab-tooltip-container .v-stat {
+  font-size: 11px;
+  color: #bbb;
+  border-top: 1px solid #555;
+  padding-top: 2px;
+  margin-top: 2px;
+}

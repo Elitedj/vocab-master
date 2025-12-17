@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { width: 350px; padding: 10px; font-family: sans-serif; }
+    .list-item { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
+    .word-info { flex: 1; }
+    .word-info b { color: #1a73e8; font-size: 16px; }
+    .count-badge { font-size: 11px; background: #eee; padding: 2px 5px; border-radius: 4px; color: #666; }
+    .del-btn { cursor: pointer; color: #999; margin-left: 10px; }
+    .del-btn:hover { color: red; }
+    .header { display: flex; justify-content: space-between; align-items: center; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h3>我的云端词库</h3>
+    <button id="clearBtn" style="font-size: 10px;">清空全部</button>
+  </div>
+  <div id="wordList"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
